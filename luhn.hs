@@ -58,7 +58,7 @@ countValid :: [Integer] -> Integer
 numValid xs = sum . map (\_ -> 1) $ filter isValid xs
 
 
--- List with 94 valid credit card numbers
+-- List with 94 valid ids
 creditcards :: [Integer]
 creditcards = [ 4716347184862961,
                 4532899082537349,
