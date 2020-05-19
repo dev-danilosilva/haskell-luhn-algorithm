@@ -43,7 +43,7 @@ doubleSecond []       = []
 -- is summed
 sumDigits :: [Integer] -> Integer
 sumDigits []     = 0
-sumDigits (x:xs) = (sum . toDigits $ x) + sumDigits xs
+sumDigits (x:xs) = foldr (+) 0 . map sum . map toDigits $ xs
 
 
 isValid :: Integer -> Bool
@@ -55,7 +55,7 @@ isValid cn = (sumDigits . doubleSecond . toDigitsRev $ cn) `mod` 10 == 0
 -- ===================================
     
 countValid :: [Integer] -> Integer
-numValid xs = sum . map (\_ -> 1) $ filter isValid xs
+countValid xs = sum . map (\_ -> 1) $ filter isValid xs
 
 
 -- List with 94 valid ids
