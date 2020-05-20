@@ -17,11 +17,6 @@ reverse' = foldr (\a b -> b ++ [a]) []
 double :: Integer -> Integer
 double x = x + x
 
--- returns the second elements of a list
-second :: [a] -> a
-second = head .tail
-
-
 -- ---------------------------------------------------------------------------------------------
 -- Takes an integer n and returns a list that each element is an digit of n
 toDigits :: Integer -> [Integer]
