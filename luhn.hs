@@ -10,8 +10,7 @@ module Validator where
 
 -- returns a reversed list
 reverse' :: [a] -> [a]
-reverse' [] = []
-reverse' (x:xs) = (reverse xs) ++ [x]
+reverse' = foldr (\a b -> b ++ [a]) []
 
 
 -- double an Int
