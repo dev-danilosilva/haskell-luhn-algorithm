@@ -18,12 +18,12 @@ double :: Integer -> Integer
 double x = x + x
 
 -- ---------------------------------------------------------------------------------------------
--- Takes an integer n and returns a list that each element is an digit of n
+-- Takes an integer n and returns a list that each element is a digit of n
 toDigits :: Integer -> [Integer]
 toDigits n  | n  > 0     =  toDigits(n `div` 10) ++ [n `mod` 10]
             | otherwise  =  []
 
--- Takes an integer n and returns a list that each element is an digit of n in reversed order
+-- Takes an integer n and returns a list that each element is a digit of n in reversed order
 toDigitsRev :: Integer -> [Integer]
 toDigitsRev = reverse' . toDigits
 
